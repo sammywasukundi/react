@@ -1,7 +1,9 @@
+import Navigation from "../components/Navigation";
 
 const About = () => {
     return (
         <div>
+            <Navigation/>
             <h1>A propos</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Libero hic optio voluptates, ipsum provident nisi eaque excepturi in fugiat,
