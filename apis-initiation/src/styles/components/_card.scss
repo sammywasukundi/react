@@ -5,8 +5,19 @@
     border-radius: 4px;
     transition: 0.3s;
   
-    h2 {
-      font-size: 1rem;
+    // .data-container {
+    //   font-size: 1rem;
+    //   display: block;
+    //   justify-content: center;
+    //   align-items: center;
+    // }
+
+    .country-details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
     }
   
     &:hover {
@@ -14,13 +25,14 @@
       z-index: 2;
     }
   
-    &:hover .infos {
+    &:hover .country-details {
       opacity: 1;
       transform: scaleY(1);
     }
   
-    .infos {
+    .country-details {
       position: absolute;
+      display: block;
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.7);
