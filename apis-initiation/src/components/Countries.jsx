@@ -1,10 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Card from './Card';
 const Countries = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('https://restcountries.com/v3.1/all?fields=name,capital,flags')
+        axios.get('https://restcountries.com/v3.1/all?fields=name,population,capital,flags')
             .then((response) =>
                 setData(response.data));
     }, []);
@@ -13,7 +14,7 @@ const Countries = () => {
         <div className="countries">
             <ul className="countries-list">
                 {data.map((country, index) => (
-                    <li key={index}>{country.name.common}</li>
+                    <Card country={country} index={index}/>
                 ))}
             </ul>
         </div>
